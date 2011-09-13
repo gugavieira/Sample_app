@@ -116,7 +116,7 @@ footer nav {
   float: none;
 }
 
-/* User sgow page */
+/* User show page */
 
 table.progile {
 	width: 100%;
@@ -138,4 +138,46 @@ td.sidebar {
 .profile img.gravatar {
 	border: 1px solid #999;
 	margin-bottom: -15px;
+}
+
+/* form */
+
+div.field, div.actions {
+	margin-bottom: 10px;
+}
+
+/* Error handling */
+
+.field_with_errors input {
+	background-color: #ff0300;
+}
+
+#error_explanation { 
+	width: 400px;
+	border: 2px solid red;
+	padding: 7px;
+	padding-bottom: 12px;
+	margin-bottom: 20px;
+	background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+	text-align: left;
+	font-weight: bold;
+	padding: : 15px;
+	font-size: 12px;
+	margin: -7px;
+	background-color: #c00;
+	color: #fff;
+}
+
+#error_explanation p {
+	color: #333;
+	margin-bottom: 0;
+	padding: 5px;
+}
+
+#error_explanation ul li {
+	font-size: 12px;
+	list-style: square;
 }
