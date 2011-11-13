@@ -1,4 +1,7 @@
 class PagesController < ApplicationController
+
+	before_filter :not_signed_in, :only => [:home]
+
   def home
   	@title = "Home"
   end
@@ -14,5 +17,13 @@ class PagesController < ApplicationController
    def help
 	@title = "Help"
   end
+  
+  private 
+  
+    def not_signed_in
+	  	 if signed_in?
+  		   redirect_to current_user
+	  	 end
+	end
 
 end
