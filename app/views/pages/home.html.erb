@@ -1,5 +1,5 @@
-<h1>Sample App</h1>
-
-<p>This is sample page from the Ruby Rails Tutorial.</p>
-
-<%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
+<% if signed_in? %>
+    <%= render 'shared/home_signed' %>
+<% else %>
+    <%= render 'shared/home_not_signed' %>
+<% end %>

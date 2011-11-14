@@ -26,3 +26,11 @@ def make_users
                  :password_confirmation => password)
   end
 end
+
+def make_microposts
+    User.all(:limit => 4).each do |user|
+        50.times do
+            user.microposts.create(:content => Faker::Lorem.sentence(5))
+        end
+    end
+end
